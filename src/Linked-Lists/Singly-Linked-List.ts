@@ -37,4 +37,17 @@ export class LinkedList<T> {
       }
       current.next = newNode;
    }
+
+   // Display the linked list
+   public display(): void {
+      let current = this.head;
+      let result = '';
+
+      while (current !== null) {
+         result += current.data + ' -> ';
+         current = current.next;
+      }
+
+      console.log(result + 'null');
+   }
 }
