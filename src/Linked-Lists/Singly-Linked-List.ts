@@ -38,6 +38,31 @@ export class LinkedList<T> {
       current.next = newNode;
    }
 
+   // Delete a node with a specific value
+   public delete(data: T): void {
+      if (this.head === null) {
+         return;
+      }
+
+      // If the head node is the one to be deleted
+      if (this.head.data === data) {
+         this.head = this.head.next;
+         return;
+      }
+
+      let previous: Node<T> | null = null;
+
+      while (this.head !== null && this.head.data !== data) {
+         previous = this.head;
+         this.head = this.head.next;
+      }
+
+      // If the node to be deleted was found
+      if (this.head !== null && previous !== null) {
+         previous.next = this.head.next;
+      }
+   }
+
    // Display the linked list
    public display(): void {
       let current = this.head;

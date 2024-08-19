@@ -6,3 +6,6 @@ list.insertAtBeginning(2);
 list.insertAtBeginning(1);
 list.append(4);
 list.display(); // Output: 1 -> 2 -> 3 -> 4 -> null
+
+list.delete(3);
+list.display(); // Output: 1 -> 2 -> 4 -> null
