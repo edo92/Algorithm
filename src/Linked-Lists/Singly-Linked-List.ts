@@ -14,4 +14,11 @@ export class LinkedList<T> {
    constructor() {
       this.head = null;
    }
+
+   // Insert a node at the beginning of the list
+   public insertAtBeginning(data: T): void {
+      const newNode = new Node(data);
+      newNode.next = this.head;
+      this.head = newNode;
+   }
 }
