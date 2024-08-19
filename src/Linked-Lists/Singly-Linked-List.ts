@@ -21,4 +21,20 @@ export class LinkedList<T> {
       newNode.next = this.head;
       this.head = newNode;
    }
+
+   // Append a node to the end of the list
+   public append(data: T): void {
+      const newNode = new Node(data);
+
+      if (this.head === null) {
+         this.head = newNode;
+         return;
+      }
+
+      let current = this.head;
+      while (current.next !== null) {
+         current = current.next;
+      }
+      current.next = newNode;
+   }
 }

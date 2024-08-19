@@ -4,3 +4,4 @@ const list = new LinkedList<number>();
 list.insertAtBeginning(3);
 list.insertAtBeginning(2);
 list.insertAtBeginning(1);
+list.append(4);
